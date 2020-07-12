@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %} 
+
+{% block content %}
+{% set pageCriticalStyles = ['css/page.css'] %}
+  <article>
+    {% include "partials/components/post-list.html" %}
+
+    {# If we leave pagination in for tags, the next and prev links will
+      link to tags and be rather confusing, so don't render in that situation #}
+    {% if not tag %}
+      {% include "partials/components/pagination.html" %}
+    {% endif %}
+  </article>
+{% endblock %}

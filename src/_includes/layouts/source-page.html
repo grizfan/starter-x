@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{ title }}</title>
+    <style>{% include "css/critical.css" %}</style>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1r;
+      }
+      
+      .grid * { grid-column: 2 / 3; }
+
+    </style>
+  </head>
+  <body>
+    <!-- start head section -->
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header role="banner" class="site-head">
+      <div class="wrapper">
+        <div class="site-head__inner">
+          <a href="/" aria-label="{{ site.name }} - home" class=" ">
+            {% include "partials/brand.svg" %}
+          </a>
+          <nav class=" " aria-label="Primary">
+            <ul class="">
+              {% for item in navigation.items %}
+              <li>
+                <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                  >{{ item.text }}</a
+                >
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end head section -->
+
+    <section class="hero is-primary is-large">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Hero title
+          </h1>
+          <h2 class="subtitle">
+            Hero subtitle
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- start main section -->
+    <main tabindex="-1" id="main-content" class="section">
+      <div class="container grid">
+      <h1 class="title is-1">home page content</h1>
+      <p>content</p>
+    </div>
+    </main>
+    <section class="section">
+      <div class="container">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title">One</p>
+              <p class="subtitle">Subtitle</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title">Two</p>
+              <p class="subtitle">Subtitle</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title">Three</p>
+              <p class="subtitle">Subtitle</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title">Four</p>
+              <p class="subtitle">Subtitle</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="section">
+
+
+      
+    </section>
+    <!-- end main section --> 
+
+    <!-- start footer -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+  </body>
+</html>
