@@ -14,6 +14,7 @@ const parseTransform = require('./src/transforms/parse-transform.js');
 // Create a helpful production flag
 const isProduction = process.env.NODE_ENV === 'production';
 
+
 module.exports = config => {
   // Add filters
   config.addFilter('dateFilter', dateFilter);
@@ -29,6 +30,9 @@ if (isProduction) {
   const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
   // Plugins
   config.addPlugin(rssPlugin);
+
+  // specify pass-through directories
+  config.addPassthroughCopy("src/js");
 
   // Custom collections
   const now = new Date();
