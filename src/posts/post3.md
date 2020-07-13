@@ -1,6 +1,6 @@
 ---
-title: A simple post 2
-date: '2019-07-02'
+title: A simple post 3
+date: '2020-07-02'
 headerImage: header image goes here
 thumbImage: https://via.placeholder.com/600x350
 tags:
@@ -8,7 +8,7 @@ tags:
   - simple-post
   - blog
 ---
-## Post 2
+## Post 3
 
 A simple post to demonstrate how a normal blog post looks on Hylia. Content is all set in the “Body” field as markdown and Eleventy transforms it into a proper HTML post. You can also edit the markdown file directly if you prefer not to use the CMS.
 

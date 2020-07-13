@@ -2,7 +2,7 @@
 title: A simple post
 date: '2019-07-02'
 headerImage: header image goes here
-thumbImage: thumbnail image goes here
+thumbImage: https://via.placeholder.com/600x350
 tags:
   - demo-content
   - simple-post
