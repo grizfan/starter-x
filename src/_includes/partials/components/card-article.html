@@ -8,8 +8,14 @@
 
     <div class="content">
       <h3>{{ item.data.title }}</h3>
-      <span class="tag is-black">How-to</span>
+      {{ item.data.lede }}
       <br>
+
+      
+      {% for tag in postTags %}
+      <span class="tag is-black">{{ item.data.tags }}</span>
+      <br>
+      {% endfor %}
       <time datetime="2016-1-1">{{ item.data.date }}</time>
     </div>
   </div>

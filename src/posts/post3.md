@@ -1,8 +1,9 @@
 ---
-title: A simple post 3
+title: A simple post 
+lede: Quick summary of post 3
 date: '2020-07-02'
 headerImage: header image goes here
-thumbImage: https://via.placeholder.com/600x350
+thumbImage: https://picsum.photos/id/237/600/350
 tags:
   - demo-content
   - simple-post

@@ -40,12 +40,7 @@ if (isProduction) {
   config.addCollection('posts', collection => {
     return [
       ...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)
-    ].reverse();
-  });
-
-  config.addCollection('postFeed', collection => {
-    return [...collection.getFilteredByGlob('./src/posts/*.md').filter(livePosts)]
-      .reverse()
+    ].reverse()
       .slice(0, site.maxPostsPerPage);
   });
 
@@ -59,11 +54,6 @@ if (isProduction) {
     return sortByDisplayOrder(collection.getFilteredByGlob('./src/work/*.md')).filter(
       x => x.data.featured
     );
-  });
-
-  // Returns a collection of blog posts in reverse date order
-  config.addCollection('blog', collection => {
-    return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
   });
 
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
