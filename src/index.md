@@ -1,5 +1,5 @@
 ---
-title: 'Hello, world'
+title: 'Technology and development help for Generation X, by Generation X'
 layout: 'layouts/home.html'
 intro:
   eyebrow: 'This is the header eyebrow'
