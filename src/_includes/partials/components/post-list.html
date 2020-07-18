@@ -1,23 +1,11 @@
-<div class="" id="post-list">
-  {# Post list content #}
-  {% set postListHeading = postsHeading %}
-  {% set postListItems = collections.postFeed %}
-  <div class="">
-    {% if postListHeadline %}
-    <h2 class="" data-highlight="primary">post list <br>
-      {{ postListHeadline }}
-    </h2>
-    {% endif %}
-    <div>
-      <h3>post list</h3>
-      
-      <ol class="">
-        {% for item in postListItems %}
-        <li class="">
-          <a href="{{ item.url }}" class="">{{ item.data.title }}</a>, {{ item.data.headerImage }} and {{ item.data.thumbImage }}
-        </li>
-        {% endfor %}
-      </ol>
+<div class="container">
+  <div class="columns is-multiline">
+    {% for item in collections.posts %}
+    <div class="column is-one-third">
+      <a href="{{ item.url }}">
+      {% include "partials/components/card-article.html" %}
+      </a>
     </div>
+    {% endfor %}
   </div>
 </div>

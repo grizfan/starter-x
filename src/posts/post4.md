@@ -1,5 +1,5 @@
 ---
-title: A simple post 4
+title: The greatest fake article ever
 lede: Quick summary of post 4
 date: '2020-07-02'
 headerImage: header image goes here

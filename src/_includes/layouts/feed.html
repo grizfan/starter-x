@@ -1,8 +1,15 @@
 {% extends "layouts/base.html" %} 
 
+{% set pageHeaderTitle = title %}
+{% set pageHeaderLede = lede %}
+
 {% block content %}
-{% set pageCriticalStyles = ['css/page.css'] %}
-  <article>
+
+{% if pageHeaderTitle %}
+  {% include "partials/components/intro.html" %}
+{% endif %}
+
+<main tabindex="-1" id="main-content" class="section">
     {% include "partials/components/post-list.html" %}
 
     {# If we leave pagination in for tags, the next and prev links will
@@ -10,5 +17,5 @@
     {% if not tag %}
       {% include "partials/components/pagination.html" %}
     {% endif %}
-  </article>
+    </main>
 {% endblock %}

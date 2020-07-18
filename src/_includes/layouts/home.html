@@ -4,8 +4,8 @@
 <section class="hero is-primary is-medium is-bold">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title is-1">
-        Hero title
+      <h1 class="title is-size-1">
+        Gen X Tech Blog
       </h1>
       <h2 class="subtitle">
         Hero subtitle
@@ -21,19 +21,7 @@
   <p>content</p>
 </div>
 <section class="section">
-  <div class="container">
-    <div class="columns is-multiline">
-      {% for item in collections.posts %}
-      <div class="column is-one-third">
-        <a href="{{ item.url }}">
-        {% include "partials/components/card-article.html" %}
-        </a>
-      </div>
-      {% endfor %}
-
-
-    </div>
-  </div>
+  {% include "partials/components/post-list.html" %}
 
 </section>
 <!-- bottom section -->
