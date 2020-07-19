@@ -4,10 +4,7 @@ lede: Quick summary of post 3
 date: '2020-07-02'
 headerImage: header image goes here
 thumbImage: https://picsum.photos/id/237/600/350
-tags:
-  - demo-content
-  - simple-post
-  - blog
+tags: ['demo-content', 'simple-post', 'blog']
 ---
 ## Post 3
 

@@ -1,14 +1,8 @@
 ---
-title: 'Technology and development help for Generation X, by Generation X'
-layout: 'layouts/home.html'
-intro:
-  eyebrow: 'This is the header eyebrow'
-  main: 'This is the page title'
-  summary: 'summary'
-  buttonText: 'button text for "work"'
-  buttonUrl: '/work'
-  image: 'https://picsum.photos/id/237/1200'
-  imageAlt: 'At text for hero image'
+title: GenXTechBlog
+lede: Technology and development help for Generation X, by Generation X
+size: is-medium
+layout: layouts/home.html
 
 ---
 

@@ -1,22 +1,13 @@
 {% extends "layouts/base.html" %} 
-
+{% set pageHeaderTitle = title %}
 {% set pageHeaderLede = lede %}
+{% set pageHeaderSize = size %}
+
 {% set blogPostList = collections.posts %}
 
 
 {% block content %}
-<section class="hero is-primary is-medium is-bold">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title is-size-1">
-        Gen X Tech Blog
-      </h1>
-      <h2 class="subtitle">
-        Hero subtitle
-      </h2>
-    </div>
-  </div>
-</section>
+{% include "partials/components/intro.html" %}
 
 <!-- start main section -->
 <main tabindex="-1" id="main-content" class="section">
