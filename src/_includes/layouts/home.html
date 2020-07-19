@@ -1,5 +1,9 @@
 {% extends "layouts/base.html" %} 
 
+{% set pageHeaderLede = lede %}
+{% set blogPostList = collections.posts %}
+
+
 {% block content %}
 <section class="hero is-primary is-medium is-bold">
   <div class="hero-body">
@@ -19,6 +23,8 @@
   <div class="container grid">
   <h2 class="title">home page content</h2>
   <p>content</p>
+
+
 </div>
 <section class="section">
   {% include "partials/components/post-list.html" %}

@@ -4,6 +4,7 @@ const w3DateFilter = require('./src/filters/w3-date-filter.js');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginCloudinaryImage = require( "eleventy-plugin-cloudinary" );
 
 // Import data files
 const site = require('./src/_data/site.json');
@@ -39,10 +40,16 @@ if (isProduction) {
   });
   config.addPlugin(syntaxHighlight);
 
+  // Cloudinary plugin
+  config.cloudinaryCloudName = 'genxtechblog'
+
+  config.addPlugin( pluginCloudinaryImage );
+
   // specify pass-through directories
   config.addPassthroughCopy("src/js");
 
   // Custom collections
+  // posts by date and limited by site setting for max posts
   const now = new Date();
   const livePosts = post => post.date <= now && !post.data.draft;
   config.addCollection('posts', collection => {
@@ -51,6 +58,11 @@ if (isProduction) {
     ].reverse()
       .slice(0, site.maxPostsPerPage);
   });
+
+ // Returns a collection of blog posts in reverse date order
+config.addCollection('blog', collection => {
+  return [...collection.getFilteredByGlob('./src/posts/*.md')].reverse();
+});
 
   // Returns work items, sorted by display order
   config.addCollection('work', collection => {

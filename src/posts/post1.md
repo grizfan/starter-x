@@ -5,9 +5,9 @@ date: '2019-07-02'
 headerImage: header image goes here
 thumbImage: https://picsum.photos/id/234/600/350
 tags:
-  - demo-content
-  - simple-post
-  - blog
+  - 'demo-content'
+  - 'simple-post'
+  - 'blog'
 ---
 ## Post 1
 

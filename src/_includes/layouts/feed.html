@@ -2,14 +2,29 @@
 
 {% set pageHeaderTitle = title %}
 {% set pageHeaderLede = lede %}
+{% set pageHeaderSummary = content %}
+{% set postListItems = pagination.items %}
+{% set blogPostList = collections.blog %}
+
+{# If this is a tag, grab those items instead as one large collection #}
+{% if tag %}
+  {% set postListItems = collections[tag] %}
+  {% set pageHeaderTitle = 'Blog posts filed under “' + tag + '”' %}
+{% endif %}
 
 {% block content %}
+
 
 {% if pageHeaderTitle %}
   {% include "partials/components/intro.html" %}
 {% endif %}
 
 <main tabindex="-1" id="main-content" class="section">
+  {% if pageHeaderSummary %}
+    <div class="container mb-6">
+      {{ pageHeaderSummary | safe }}
+    </div>
+  {% endif %}
     {% include "partials/components/post-list.html" %}
 
     {# If we leave pagination in for tags, the next and prev links will
