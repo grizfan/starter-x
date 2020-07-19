@@ -30,5 +30,8 @@
     "sass": "^1.26.10",
     "semver": "^7.3.2",
     "slugify": "^1.4.4"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1"
   }
 }

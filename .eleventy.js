@@ -3,6 +3,7 @@ const dateFilter = require('./src/filters/date-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Import data files
 const site = require('./src/_data/site.json');
@@ -36,6 +37,7 @@ if (isProduction) {
       hostname: "https://www.genxtechblog.com",
     },
   });
+  config.addPlugin(syntaxHighlight);
 
   // specify pass-through directories
   config.addPassthroughCopy("src/js");
