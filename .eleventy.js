@@ -1,7 +1,7 @@
 // Filters
 const dateFilter = require('./src/filters/date-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
-const rssPlugin = require('@11ty/eleventy-plugin-rss');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 const sitemap = require("@quasibit/eleventy-plugin-sitemap");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginCloudinaryImage = require( "eleventy-plugin-cloudinary" );
@@ -32,10 +32,10 @@ if (isProduction) {
 
   const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
   // Plugins
-  config.addPlugin(rssPlugin);
+  config.addPlugin(pluginRss);
   config.addPlugin(sitemap, {
     sitemap: {
-      hostname: "https://www.genxtechblog.com",
+      hostname: "http://localhost:8080",
     },
   });
   config.addPlugin(syntaxHighlight);
