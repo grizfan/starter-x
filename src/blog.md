@@ -4,7 +4,7 @@ lede: All the news that's print to fit
 layout: 'layouts/feed.html'
 pagination:
   data: collections.blog
-  size: 3
+  size: 9
 permalink: 'blog{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html'
 paginationPrevText: 'Newer posts'
 paginationNextText: 'Older posts'

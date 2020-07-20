@@ -5,7 +5,6 @@ date: '2017-07-19'
 headerImage: header image goes here
 thumbImage: https://picsum.photos/id/222/600/350
 tags:
-  - demo-content
   - simple-post
   - blog
 ---
