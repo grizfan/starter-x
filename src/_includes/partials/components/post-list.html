@@ -7,5 +7,12 @@
       </a>
     </div>
     {% endfor %}
+    {% for item in blogPostList %}
+    <div class="column is-one-third">
+      <a href="{{ item.url }}">
+      {% include "partials/components/card-article.html" %}
+      </a>
+    </div>
+    {% endfor %}
   </div>
 </div>
