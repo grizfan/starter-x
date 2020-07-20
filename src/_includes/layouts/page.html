@@ -1,0 +1,17 @@
+{% extends "layouts/base.html" %} 
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderLede = lede %}
+
+{% block content %}
+
+{% if pageHeaderTitle %}
+  {% include "partials/components/intro.html" %}
+{% endif %}
+
+<main tabindex="-1" id="main-content" class="section">
+  <div class="container">
+    article section
+  </div>
+</main>
+{% endblock %}

@@ -1,20 +1,24 @@
 @charset "utf-8";
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
-
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
 // Set your brand colors
-$purple: #8A4D76;
-$pink: #FA7C91;
-$brown: #757763;
-$beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
+$brand-orange: #f06600;
+$brand-darkBlue: #0a314f;
+$brand-purple: #5656d8;
+$brand-red: #f44242;
+$brand-green: #28c9b1;
+$brand-lavender: #6a9ad3;
 
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
-$grey-dark: $brown;
-$grey-light: $beige-light;
-$primary: $purple;
-$link: $pink;
+$family-primary: "Mulish",sans-serif;
+$grey-dark: $brand-darkBlue;
+$grey-light: $brand-lavender;
+$primary: $brand-orange;
+$link: $brand-purple;
+$warning: $brand-red;
+$success: $brand-green;
+$info: $brand-darkBlue;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 $body-font-size: 1.125rem;
@@ -28,14 +32,44 @@ $input-shadow: none;
 // customize box design per https://bulma.io/documentation/elements/box/
 
 // Import only what you need from Bulma
+
+// utilities
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/base/_all.sass";
+// elements
 @import "../../node_modules/bulma/sass/elements/button.sass";
 @import "../../node_modules/bulma/sass/elements/container.sass";
 @import "../../node_modules/bulma/sass/elements/box.sass";
+@import "../../node_modules/bulma/sass/elements/content.sass";
 @import "../../node_modules/bulma/sass/elements/title.sass";
-@import "../../node_modules/bulma/sass/form/_all.sass";
+@import "../../node_modules/bulma/sass/elements/tag.sass";
+// components
 @import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/components/card.sass";
+@import "../../node_modules/bulma/sass/components/media.sass";
+@import "../../node_modules/bulma/sass/components/level.sass";
+// layout
 @import "../../node_modules/bulma/sass/layout/hero.sass";
 @import "../../node_modules/bulma/sass/layout/section.sass";
+// helpers
+@import "../../node_modules/bulma/sass/helpers/typography.sass";
+@import "../../node_modules/bulma/sass/helpers/spacing.sass";
+@import "../../node_modules/bulma/sass/helpers/color.sass";
+// others
+@import "../../node_modules/bulma/sass/form/_all.sass";
 @import "../../node_modules/bulma/sass/grid/_all.sass";
+@import "code.scss";
+
+
+
+.skip-link {
+  position:absolute;
+  top:1rem;
+  left:1rem;
+  z-index:99
+}
+.skip-link:not(:focus),.visually-hidden{border:0;clip:rect(0 0 0 0);height:auto;margin:0;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap}
+
+.navbar-item[data-state="active"] {
+  border-bottom: solid $brand-darkBlue;
+}

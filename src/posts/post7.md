@@ -1,15 +1,14 @@
 ---
-title: A simple post 2
-lede: Quick summary of post 2
-date: '2019-07-02'
+title: 7th post created
+lede: Quick summary of post 7
+date: '2017-07-19'
 headerImage: header image goes here
-thumbImage: https://picsum.photos/id/119/600/350
+thumbImage: https://picsum.photos/id/222/600/350
 tags:
-  - toast
+  - simple-post
   - blog
-  - ducks
 ---
-## Post 2
+## Post 7
 
 A simple post to demonstrate how a normal blog post looks on Hylia. Content is all set in the “Body” field as markdown and Eleventy transforms it into a proper HTML post. You can also edit the markdown file directly if you prefer not to use the CMS.
 
@@ -20,11 +19,11 @@ How about a `<blockquote>`?
 
 > Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.
 
-A list of stuff:
+## A list of stuff:
 
-- Sed posuere consectetur est at lobortis
-- Aenean lacinia bibendum nulla sed consectetur
-- Sed posuere consectetur est at lobortis
+* Sed posuere consectetur est at lobortis
+* Aenean lacinia bibendum nulla sed consectetur
+* Sed posuere consectetur est at lobortis
 
 How about an ordered list of stuff:
 
@@ -32,5 +31,14 @@ How about an ordered list of stuff:
 2. Aenean lacinia bibendum nulla sed consectetur
 3. Sed posuere consectetur est at lobortis
 
+### sample code
+<!-- Markdown Template -->
+``` js
+<title>{{ pageTitle }}</title>
+<link rel="canonical" href="{{ currentUrl }}" />
 
-Hopefully, this has demonstrated how simple it is to make a nice looking blog with Hylia.
+<meta property="og:site_name" content="{{ siteTitle }}" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ currentUrl }}" />
+```

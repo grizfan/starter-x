@@ -1,23 +1,33 @@
 {% extends "layouts/base.html" %} 
+{% set pageHeaderTitle = title %}
+{% set pageHeaderLede = lede %}
+{% set pageHeaderSize = size %}
+
+{% set blogPostList = collections.posts %}
+
 
 {% block content %}
-<article class="intro">
-  <div class="[ intro__header ] [ radius frame ]">
-    <h1 class="[ intro__heading ] [ weight-normal text-400 md:text-600 ]">
-      {{ intro.eyebrow }}
-      <em class="text-800 md:text-900 lg:text-major weight-bold">{{ intro.main }}</em>
-    </h1>
-  </div>
-  <div class="[ intro__content ] [ flow ]">
-    <p class="intro__summary">{{ intro.summary }}</p>
-    <a href="{{ intro.buttonUrl }}" class="button">{{ intro.buttonText }}</a>
-  </div>
-  <div class="[ intro__media ] [ radius dot-shadow ]">
-    <img
-      class="[ intro__image ] [ radius ]"
-      src="{{ intro.image }}"
-      alt="{{ intro.imageAlt }}"
-    />
-  </div>
-</article>
+{% include "partials/components/intro.html" %}
+
+<!-- start main section -->
+<main tabindex="-1" id="main-content" class="section">
+  <div class="container grid">
+  <h2 class="title">home page content</h2>
+  <p>content</p>
+
+
+</div>
+<section class="section">
+  {% include "partials/components/post-list.html" %}
+
+</section>
+<!-- bottom section -->
+<section class="section">
+
+  <span class="tag is-black">How-to</span>
+
+  
+</section>
+</main>
+
 {% endblock %}

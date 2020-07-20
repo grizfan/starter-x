@@ -1,0 +1,26 @@
+<!-- start head section -->
+<a class="skip-link" href="#main-content">Skip to content</a>
+    
+<!-- see https://bulma.io/documentation/components/navbar/ -->
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/" aria-label="{{ site.name }} - home">
+      {% include "partials/brand.svg" %}  <span class="mx-2">GenXTechBlog</span>
+    </a>
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+
+    <div class="navbar-end" aria-label="Primary">
+      {% for item in navigation.items %}
+            <a class="navbar-item is-hoverable is-tab" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+          {% endfor %}
+    </div>
+  </div>
+</nav>
+<!-- end head section -->

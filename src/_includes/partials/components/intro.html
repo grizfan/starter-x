@@ -1,6 +1,14 @@
-<header>
-  <h1 class="p-name">{{ introHeading }}</h1>
-  {% if introSummary %}
-    <div>{{ introSummary | safe }}</div>
-  {% endif %}
-</header>
+<section class="hero is-primary is-bold {{ pageHeaderSize }}">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-size-1">
+       {{ pageHeaderTitle }}
+      </h1>
+      {% if pageHeaderLede %}
+      <p class="subtitle">
+        {{ pageHeaderLede }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+</section>

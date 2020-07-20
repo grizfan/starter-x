@@ -1,21 +1,23 @@
 {% extends 'layouts/base.html' %}
 {% set pageType = 'Post' %}
 
-{# Intro content #}
-{% set introHeading = title %}
-{% set introSummary %}
-<p>
-  {% if date %}
-    <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | dateFilter }}</time>
-  {% endif %}
-  <span role="text">— {{ helpers.getReadingTime(content) }} minute read</span>
-</p>
-{% endset %}
+{% set pageHeaderTitle = title %}
+{% set pageHeaderLede = lede %}
 
 {% block content %}
-  <main id="main-content" tabindex="-1">
-    <article class="h-entry">
-      {% include "partials/components/intro.html" %}
+{% if pageHeaderTitle %}
+  {% include "partials/components/intro.html" %}
+{% endif %}
+  <main tabindex="-1" id="main-content" class="section">
+    <div class="container">
+    <p>
+      {% if date %}
+        <time datetime="{{ date | w3DateFilter }}" class="dt-published">{{ date | dateFilter }}</time>
+      {% endif %}
+      <span role="text">— {{ helpers.getReadingTime(content) }} minute read</span>
+    </p>
+    <article class="content">
+      
       {{ content | safe }}
       {% if site.enableThirdPartyComments %}
         <hr />
@@ -29,13 +31,14 @@
           <ul>
             {% for item in tags %}
               <li>
-                <a href="/tags/{{ item }}">{{ item }}</a>
+                <a href="/tag/{{ item }}">{{ item }}</a>
               </li>
             {% endfor %}
           </ul>
         </footer>
       {% endif %}
     </article>
+  </div>
   </main>
 {% endblock %}
 

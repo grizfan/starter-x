@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{ title }}</title>
+    {% include "partials/global/meta-info.html" %}
+    <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+    <style>{% include "css/critical.css" %}</style>
   </head>
   <body>
-    {% include "partials/site-head.html" %}
-    <main tabindex="-1" id="main-content">
+    {% include "partials/components/top-nav.html" %}
+    <!-- start main section -->
+    
       {% block content %}{% endblock %}
-    </main>
+      
+    {% include "partials/components/footer.html" %}
+    <script src="/js/navCollapse.js"></script>
   </body>
 </html>

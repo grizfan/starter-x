@@ -1,19 +1,26 @@
 {# Only renders this section if there are links to render #}
 {% if pagination.href.next or pagination.href.previous %}
-  <footer class="">
-    <div class="">
-      <nav class="" aria-label="Pagination links">
-        {% if pagination.href.previous %}
-          <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
-            <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
-          </a>
-        {% endif %}
-        {% if pagination.href.next %}
-          <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
-            <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
-          </a>
-        {% endif %}
-      </nav>
-    </div>
+  <footer class="mt-6">
+    <nav class="level is-mobile" aria-label="Pagination links">
+      <div class="level-item has-text-centered">
+        <div>
+          {% if pagination.href.previous %}
+            <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
+              <span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          {% if pagination.href.next %}
+            <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+              <span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
   </footer>
 {% endif %}
+
