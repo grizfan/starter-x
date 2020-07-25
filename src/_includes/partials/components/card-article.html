@@ -1,27 +1,23 @@
 <div class="card">
   <div class="card-image">
-    <a href="{{ item.url }}">
+    <a href="{{ item.url }}" aria-label="Read article on {{ item.data.title }}">
     <figure class="image is-16by9">
       <img src="{{ item.data.thumbImage }}" alt="{{ item.data.title }}">
+      <figcaption><h3 class="is-size-5 mx-2">{{ item.data.title }}</h3></figcaption>
     </figure>
     </a>
   </div>
   <div class="card-content">
 
     <div class="content">
-      <a href="{{ item.url }}">
-      <h3>{{ item.data.title }}</h3>
       {{ item.data.lede }}
-    </a>
       <br>
       {%- for tags in item.data.tags %}
-      <a href="/tag/{{ tags }}">
+      <a href="/tag/{{ tags }}" aria-label="Read article on {{ item.data.title }}">
       <span class="tag is-black">{{ tags }}</span> 
       </a>
       {% endfor %}
-      <br>
-      <time datetime="2016-1-1">{{ item.data.date }}</time>
-      
+      <p class="has-text-right is-size-6 mt-3"><time datetime="2016-1-1">{{ item.data.date }}</time></p>
     </div>
   </div>
 </div>
