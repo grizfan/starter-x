@@ -1,4 +1,4 @@
 ---
 title: 'Contact us'
-layout: 'layouts/page.html'
+layout: 'layouts/contact.html'
 ---
