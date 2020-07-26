@@ -2,4 +2,7 @@
 title: 'About this site'
 layout: 'layouts/page.html'
 ---
-about this site
+## The origin story
+
+
+## Why Gen X?
